@@ -58,7 +58,7 @@ html,body {margin:0; padding:0;background: #151518;color: #FFFFFF; text-align: c
 
 @media(max-width:400px){
     .slogan{width: 350px; font-size:18px;}
-    .title{font-size:36px;}
+    .title{font-size:36px;margin-top:30vh;}
 }
 
 @media(max-height:500px){
