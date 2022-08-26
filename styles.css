@@ -63,5 +63,5 @@ html,body {margin:0; padding:0;background: #151518;color: #FFFFFF; text-align: c
 
 @media(max-height:500px){
     html,body{height:500px;}
-    .title{margin-top:50%;}
+    .title{margin-top:30%;}
 }
