@@ -58,8 +58,10 @@ margin-top:auto;
 
 @media(max-width:400px){
     .slogan{width: 350px; font-size:18px;}
+    .title{font-size:36px;}
 }
 
-@media(max-width:650px){
+@media(max-height:650px){
     html,body{height:650px;}
+    .title{margin-top:50%;}
 }
