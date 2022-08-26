@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-html,body {margin:0; padding:0;background: #151518;color: #FFFFFF; text-align: center; font-family: 'Poppins'; height:100%;}
+html,body {margin:0; padding:0;background: #151518;color: #FFFFFF; text-align: center; font-family: 'Poppins'; height:100%; width:100%}
 
 h1 {
     font-family: 'Montserrat';
@@ -40,6 +41,7 @@ justify-content: center;
 align-items: center;
 background-size:cover;
 background-repeat: no-repeat;
+margin-top:auto;
 
 }
 .text{
@@ -53,4 +55,4 @@ background-repeat: no-repeat;
     
 }
 
-.container{display:flex; justify-content: center; flex-direction: column; height:100%;}
+.container{display:flex; justify-content: center; flex-direction: column; height:100%; width:100%}
