@@ -1,13 +1,130 @@
 <html>
+    <meta charset="UTF-8">
     <head>
+        <title>Qubits App</title>
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit:cover, maximum-scale=1" />
     </head>
     <body>
         <div class="container">
-        <div class="title">QUBIT<span class="spacing">S</span></div>
-        <div class="slogan"><span class="bold">QUBITS</span> is a way to always stay on track, outmaster & outperform</div>
-        <div class="footer"><div class="text">Coming soon</div></div>
+            <div class="title-text fadeInUp">
+            <div class="title">QUBIT<span class="spacing">S</span></div>
+             <div class="slogan"><span class="bold"></span>A way to always stay on track, <br>outmaster & outperform</div>
+             <a class="link-link" href="https://my.qubits-app.com" target="_blank"><div class="launch-buttone"><span class="boldn">LAUNCH</span></div></a>
+             </div> 
+             <div class="title-image fadeInUpImg"></div>       
+        </div>
+        <div class="footer">
+            <div class="as-good fadeInUp"><div style="width:80%">Browser app that works on <span class="bold"> mobile devices</span> &nbsp;just as good, as on <span class="bold"> desktop</span></div></div>
+           <!-- <div class="button-container fadeInUp"><a class="text" href="https://my.qubits-app.com" target="_blank" >Launch</a></div>-->
+        </div>
+        <!--
+         <div class="adventages">
+            <div class="adventages-title">Easy and powerful tool for your growth</div>
+            <div class="adventage-container">
+                <div style="width: 40%; display: flex; justify-content: center;">
+                     <img src="./assets/01.png" height="400" class="adventage-image">
+                </div>
+            <div style="width: 40%; display: flex; justify-content: center; flex-direction: column;"> 
+                <div class="adventage-text" style="margin-left:5%">“Qubit” is a ”once a day” action, that can drastically makes you better overtime. 
+                </div>
+                <div class="adventage-text" style="margin-left:5%">
+
+                    Set tasks that requires to be performed regularly, like training, studying, working, exploring, building or breaking habits — and begin your journey of growth. </div>
+                </div>
+            </div>
+        
+            <div class="adventage-container">
+                <div style="width: 40%; display: flex; justify-content: center;">
+                    <div class="adventage-text">Only consistency allow us to master skills and achieve goals. 
+
+                        Qubits helps you to always stay on track and encourages you to show up regularly.
+                    </div>
+               </div>
+                
+                    <div style="width: 40%; display: flex; justify-content: center;">
+                        <img src="./assets/02.png" height="400" style="margin-left:5%" class="adventage-image">
+                   </div>
+                
+                
+
+            </div>
+            <div class="adventage-container">
+                <div style="width: 40%; display: flex; justify-content: center;">
+                    <img src="./assets/03.png" height="400" class="adventage-image">
+               </div>
+
+            <div style="width: 40%; display: flex; justify-content: center; flex-direction: column;"> 
+                <div class="adventage-text" style="margin-left:5%">Start completing tasks, keep your eyes on progress and grow.
+                    Remember, you can't master anything without doing it on a regular basis.  
+                </div>
+                <div class="adventage-text" style="margin-left:5%">
+                    Consistency is king 👑
+                </div>                    
+            </div>
+
+        </div>
     </div>
+    <div class="footer" style="display:flex; justify-content:center; align-items:center">
+        <a class="text" href="https://my.qubits-app.com" target="_blank">Launch</a>
+    </div>
+        <div class="support">
+            <div style="width:100%">
+            <div class="support-flex-container">
+                <div style="width: 40%; display: flex; justify-content: center;">
+                    <div class="support-image-container">
+                        <div class="support-image" id="support-image"><div class="support-image-sad" id="support-image-sad"></div></div>
+                        <div class="social-media-container">
+                            <a class="link-link" href="https://instagram.com/a_matviychuk" target="_blank"><div class="social-media-icon instagram-icon"></div></a>
+                            <div class="social-media-icon twitter-icon"></div>
+                        </div>
+                    </div>
+               </div>
+               <div style="width: 40%; display: flex; justify-content: center;">
+                <div class="support-text">
+                    <div class="support-main-text">Hey! I'm Arseniy 🇺🇦 </div>
+                    <br>
+                       <div class="support-secondary-text"><span class="logo-style">QUBITS</span> is Designed, Coded, <span style="display:block"><span class="golden-text">Packed & Delivered</span> by me.</span></div>
+                       <br>
+                  <div class="support-additional-text"><span class="logo-style">QUBITS</span> is free, and all its current features will remain free forever. However, i'm thankful to everyone, who supports production on Patreon. </div> 
+                    
+           </div>
+           </div>
+            
+            
+    </div>
+        <div class="patreon-button" id="patreon"></div>
+    </div>
+        </div>
+        -->
     </body>
+    <script>
+        let initialOpacity = 1;
+        const patreon = document.getElementById('patreon');
+        const image = document.getElementById('support-image-sad');
+        patreon.addEventListener("mouseenter", (event) => {
+            image.style.opacity=0;
+        });
+        patreon.addEventListener("mouseleave", (event) => {
+            image.style.opacity=1;
+        });
+
+        const items = document.querySelectorAll('.adventage-image');
+        const cb = function(entries){
+            entries.forEach(entry => {
+                if (entry.isIntersecting){
+                    entry.target.classList.add('adventageImage-fadeInUp');
+                    entry.unobserve(entry.target);
+                } else{/*entry.target.classList.remove('adventageImage-fadeInUp');*/}
+                
+            });
+        }
+
+        const io = new IntersectionObserver(cb);
+        for (let i=0; i < items.length; i++){
+            io.observe(items[i]);
+        }
+     
+
+    </script>
 </html>
