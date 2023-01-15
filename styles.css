@@ -419,49 +419,112 @@ margin-left:10px;
 
 .adventage-image{opacity:0}
 
-.footer{height:12%}
-@media(max-width:700px){
+.footer{height:20%}
 
-.title-image{
-  /* main */
+.sided-block{
+  width: 40%; 
+  display: flex; 
+  justify-content: center;
+}
 
-
+.adventage-container-mobile{
   display:none;
 }
 
-.title-text{
-  text-align:center;
-  margin-left:0;
+@media(max-width:780px){
+
+      .title-image{
+        /* main */
+
+
+        display:none;
+      }
+
+      .title-text{
+        text-align:center;
+        margin-left:0;
+      }
+      .slogan{width:unset}
+
+      .title{margin-top:10vh;}
+
+      .link{
+        margin:auto;
+      }
+
+      .launch-buttone{
+        margin:auto;
+        margin-top:50px;
+
+        opacity:1;
+        background-clip:unset;
+        -webkit-background-clip:unset;
+        -webkit-text-fill-color: #000;
+        border:1px solid transparent;
+        background-size:500%;
+      animation:flow 2s infinite;
+      padding:10px 40px 10px 40px;
+      color:#151518;
+    }
+
+
+
+    /* footer */
+
+    /*adventages*/
+    .adventage-container-mobile{
+      display:unset;
+    }
+
+    .adventage-container{
+      display:none;
+    }
+
+
+    .adventage-text{
+      text-align: center;
+      margin:auto;
+      margin-top:10px;
+      max-width: 350px;
+    }
+
+
+
+    /* support */
+
+    .support{
+      height:unset;
+    }
+    .support-flex-container {
+      display:unset;
+    }
+
+    .sided-block {
+      width:unset;
+    }
+
+    .support-text {
+      text-align: center;
+      padding: 0px 40px;
+      margin-left: 0px;
+      margin-top:40px;
+    }
+
+    .support-image-container {
+      margin-top:80px;
+    }
+
+    .patreon-button{
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+
 }
-.slogan{width:unset}
 
-.title{margin-top:10vh;}
-
-.link{
+.footer-icon{
+  height: 34px;
+  width: 24px;
+  background: url(./assets/footer-more-icon.svg) no-repeat center;
+  background-size: contain;
   margin:auto;
-}
-
-.launch-buttone{
-  margin:auto;
-  margin-top:50px;
-
-  opacity:1;
-  background-clip:unset;
-  -webkit-background-clip:unset;
-  -webkit-text-fill-color: #000;
-  border:1px solid transparent;
-  background-size:500%;
-  animation:flow 2s infinite;
-  padding:10px 40px 10px 40px;
-  color:#151518;
-}
-
-
-
- /* footer */
-
- /*adventages*/
-
- /* support */
-
 }
