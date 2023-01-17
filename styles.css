@@ -323,6 +323,11 @@ margin-left:10px;
         float: left;
         padding-top: 100%;
         content: "";
+      }
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
       }}
   }
 
@@ -337,6 +342,11 @@ margin-left:10px;
         float: left;
         padding-top: 100%;
         content: "";
+      }
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
       }}
   }
 
