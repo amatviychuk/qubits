@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:600");
 
 html,body {margin:0; padding:0;background: #151518;color: #FFFFFF; text-align: center; font-family: 'Poppins'; height:100%; width:100%;}
@@ -316,8 +316,14 @@ margin-left:10px;
     width:100%;
     max-width:250px;
     aspect-ratio: 1/1;
-    background:url("./assets/face.png") no-repeat center;
+    background:url("./assets/face-1.png") no-repeat center;
     background-size: contain;
+    @supports not (aspect-ratio: 1/1) {
+      &::before {
+        float: left;
+        padding-top: 100%;
+        content: "";
+      }}
   }
 
   .support-image-sad{
@@ -326,6 +332,12 @@ margin-left:10px;
     background:url("./assets/face-sad.png") no-repeat center;
     background-size: contain;
     opacity:0;
+    @supports not (aspect-ratio: 1/1) {
+      &::before {
+        float: left;
+        padding-top: 100%;
+        content: "";
+      }}
   }
 
   .support-image-container{
