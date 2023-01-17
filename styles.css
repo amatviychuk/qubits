@@ -315,7 +315,7 @@ margin-left:10px;
   .support-image{
     width:100%;
     max-width:250px;
-    aspect-ratio: 1/1;
+   /* aspect-ratio: 1/1;*/
     background:url("./assets/face-1.png") no-repeat center;
     background-size: contain;
     @supports not (aspect-ratio: 1/1) {
@@ -333,7 +333,7 @@ margin-left:10px;
 
   .support-image-sad{
     width:100%;
-    aspect-ratio: 1/1;
+    /*aspect-ratio: 1/1;*/
     background:url("./assets/face-sad.png") no-repeat center;
     background-size: contain;
     opacity:0;
@@ -343,11 +343,28 @@ margin-left:10px;
         padding-top: 100%;
         content: "";
       }
-      &::after {
-        display: block;
+      &::after {       
+      }}
+  }
+  .support-image::before {
+    float: left;
+    padding-top: 100%;
+    content: "";
+  }
+  .support-image::after {
+    display: block;
         content: "";
         clear: both;
-      }}
+  }
+  .support-image-sad::before {
+    float: left;
+    padding-top: 100%;
+    content: "";
+  }
+  .support-image-sad::after {
+    display: block;
+        content: "";
+        clear: both;
   }
 
   .support-image-container{
